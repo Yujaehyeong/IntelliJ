@@ -6,9 +6,9 @@
 
 File > New > Project 경로를 따라 아래와 같이 선택 후 Next 선택
 
-![image-20191028211805820]()
+![image-20191028211805820](https://github.com/Yujaehyeong/IntelliJ/blob/master/%EC%9D%B4%EB%AF%B8%EC%A7%80/intelliJ/gradle%20%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8%20%EC%83%9D%EC%84%B1%20%EA%B2%BD%EB%A1%9C.PNG?raw=true)
 
-![image-20191028212118502]()
+![image-20191028212118502](https://github.com/Yujaehyeong/IntelliJ/blob/master/%EC%9D%B4%EB%AF%B8%EC%A7%80/intelliJ/%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8%20%EC%83%9D%EC%84%B1%20%EC%84%A4%EC%A0%95.PNG?raw=true)
 
 
 - GroupId
@@ -27,4 +27,4 @@ File > New > Project 경로를 따라 아래와 같이 선택 후 Next 선택
 Finish를 누르면 프로젝트가 생성된다. 생성된 프로젝트의 디렉토리 구조는 아래와 같다.
 (main과 test 디렉토리가 생성됨)
 
-![image-20191029215449876]()
+![image-20191029215449876](https://github.com/Yujaehyeong/IntelliJ/blob/master/%EC%9D%B4%EB%AF%B8%EC%A7%80/intelliJ/gralde%20%ED%8F%B4%EB%8D%94%EA%B5%AC%EC%A1%B0.PNG?raw=true)

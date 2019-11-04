@@ -40,6 +40,6 @@
 
 - 이상없이 실행이 되면 브라우저에서 localhost:8088로 접근한다.
 
-![image-20191104231529841](C:\Users\갓맹주니행님\AppData\Roaming\Typora\typora-user-images\image-20191104231529841.png)
+![image-20191104231529841](https://github.com/Yujaehyeong/SpringBoot-with-IntelliJ/blob/master/%EC%9D%B4%EB%AF%B8%EC%A7%80/springboot/%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8%20url%20%EC%A0%91%EA%B7%BC%EC%98%A4%EB%A5%981.PNG)
 
 - 해당 에러페이지가 뜨는 경우

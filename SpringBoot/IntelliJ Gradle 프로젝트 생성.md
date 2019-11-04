@@ -6,7 +6,7 @@
 
 - File > New > Project 를 선택하고 아래 순서를 따른다.
 
-  | ![image-20191028212118502]() |      |
+  | ![image-20191028212118502](https://github.com/Yujaehyeong/SpringBoot-with-IntelliJ/blob/master/%EC%9D%B4%EB%AF%B8%EC%A7%80/springboot/%EC%8A%A4%ED%94%84%EB%A7%81%EB%B6%80%ED%8A%B8%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8%EC%83%9D%EC%84%B11.PNG) |      |
   | ---------------------------- | ---- |
   | ![image-20191028212118502]() |      |
   | ![image-20191028212118502]() |      |

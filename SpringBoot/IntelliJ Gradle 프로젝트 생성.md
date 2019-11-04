@@ -19,9 +19,9 @@
 
 - Run 버튼(or Ctrl + F11)을 눌러서 프로젝트를 실행한다.
 
-- 실행도중 아래와 같은 오류가 나면 아래링크를 참조한다. 
+- 실행도중 아래와 같은 오류가 나면 아래링크를 참조한다.
 
-  ![image-20191028212118502]()
+  ![image-20191028212118502](https://github.com/Yujaehyeong/SpringBoot-with-IntelliJ/blob/master/%EC%9D%B4%EB%AF%B8%EC%A7%80/springboot/port%EC%98%A4%EB%A5%98.PNG?raw=true)
 
   * [포트번호 수정 후 적용]: https://github.com/Yujaehyeong/SpringBoot-with-IntelliJ/blob/master/%EC%98%A4%EB%A5%98%EC%88%98%EC%A0%95/SpringBoot%20port%20%EB%B3%80%EA%B2%BD%20%ED%9B%84%20%EC%A0%81%EC%9A%A9.md
 

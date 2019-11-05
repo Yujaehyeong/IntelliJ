@@ -76,7 +76,7 @@ public class TestController {
 
 - ##### 다시 프로젝트를 실행하고 브라우저에서 설정된 경로인 localhost:8088/test/test로 접근한다.
   
-- ![image-20191105223555242](https://github.com/Yujaehyeong/SpringBoot-with-IntelliJ/blob/master/%EC%9D%B4%EB%AF%B8%EC%A7%80/springboot/%EA%B8%B0%EB%B3%B8%EA%B2%BD%EB%A1%9C%EC%84%A4%EC%A0%95%ED%8E%98%EC%9D%B4%EC%A7%80.PNG?raw=true)
+ ![image-20191105223555242](https://github.com/Yujaehyeong/SpringBoot-with-IntelliJ/blob/master/%EC%9D%B4%EB%AF%B8%EC%A7%80/springboot/%EA%B8%B0%EB%B3%B8%EA%B2%BD%EB%A1%9C%EC%84%A4%EC%A0%95%ED%8E%98%EC%9D%B4%EC%A7%80.PNG?raw=true)
   
 - ##### 위와 같은 페이지가 나오는 것을 확인 할 수 있다.
   

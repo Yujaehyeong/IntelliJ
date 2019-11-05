@@ -47,7 +47,7 @@
 - 위와같이 에러페이지가 뜨는 경우 메세지 그대로 매핑된 경로가 없기때문에 연결을 하라는 것이다.
   아래 사진과 같이 com.example. practice 패키지 밑에 contoller 패키지를 생성한후 Controller로 사용할 Class를 생성한다.
 
-  ![image-20191105223555242]()
+  ![image-20191105223555242](https://github.com/Yujaehyeong/SpringBoot-with-IntelliJ/blob/master/%EC%9D%B4%EB%AF%B8%EC%A7%80/springboot/%EA%B8%B0%EB%B3%B8%EC%BB%A8%ED%8A%B8%EB%A1%A4%EB%9F%AC%EC%83%9D%EC%84%B1.PNG?raw=true)
   
 
 - 클래스 생성 후 아래의 코드를 작성한다.
@@ -75,4 +75,4 @@ public class TestController {
 - 다시 프로젝트를 실행하고 브라우저에서 설정된 경로인 localhost:8088/test/test로 접근한다.
   
 
-  ![image-20191105223555242]()
+  ![image-20191105223555242](https://github.com/Yujaehyeong/SpringBoot-with-IntelliJ/blob/master/%EC%9D%B4%EB%AF%B8%EC%A7%80/springboot/%EA%B8%B0%EB%B3%B8%EA%B2%BD%EB%A1%9C%EC%84%A4%EC%A0%95%ED%8E%98%EC%9D%B4%EC%A7%80.PNG?raw=true)

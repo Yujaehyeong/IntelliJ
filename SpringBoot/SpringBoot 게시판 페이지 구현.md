@@ -17,7 +17,7 @@
 
 
 
-- 설명된 것과 같이 build.gradle 파일에 해당 문구를 추가하겠다.
+- 설명된 것과 같이 `build.gradle` 파일에 해당 문구를 추가하겠다.
 
   ```java
   // 코드중략
@@ -36,10 +36,29 @@
 - 그런 다음  `src/main/resources/template`  하위에 `index`라는 디렉토리를 하나 더 만들고 `index.html` 파일을 추가한다.
 
   ![image-20191108235356996]()
+
+  ```html
+  <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+  <html xmlns:th="http://www.w3.org/1999/xhtml">
+  <head>
+      <meta charset="UTF-8"/>
+      <title>Index: ORM learning programming</title>
+  </head>
+  <body>
+  <h1>Made by honeymon</h1>
+  <div>
+      <div>Very simple!</div>
+      <!-- SpEl: Spring Expression Language 사용 -->
+      <div th:text="${greeting}">Greeting</div>
+  </div>
+  </body>
+  </html>
+  ```
+
   
 
-- index.html 파일 추가 후,
-  이전에 만들어 두었던 com/example/practice/controller/TestController.java 컨트롤러를 아래처럼 수정.
+- `index.html` 파일 추가 후,
+  이전에 만들어 두었던 `com/example/practice/controller/TestController.java` 컨트롤러를 아래처럼 수정.
 
   - `아래처럼 코드 수정 시, import가 자동으로 되기 때문에 그 부분은 생략함. ` 
 
@@ -63,7 +82,7 @@
   // 코드중략
   
   // TO-BE
-  @Controller // Controller 어노테이션으로 수정 - 서버에서 페이지로 응답하기 위해설정
+  @Controller // Controller 어노테이션으로 수정
   @RequestMapping("/test")
   public class TestController {
   
@@ -71,7 +90,7 @@
       public String getRequest(Model model){ // Model 객체 파라미터 추가
           // Model 객체에 데이터 저장 - key:"greeting" | value:"Hello, world!" 
           model.addAttribute("greeting", "Hello, world!"); 
-          return "/index/index"; // index.html 파일 경로매핑
+          return "index/index"; // index.html 파일 경로매핑
       }
   }
   ```
@@ -82,3 +101,4 @@
 - 코드 수정이 완료되었다면 이전처럼 브라우저에서 `localhost:8088/test/test`로 접근한다.
 
   ![image-20191109002212580](타임리프 기본화면구성)
+

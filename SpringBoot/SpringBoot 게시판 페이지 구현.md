@@ -37,7 +37,7 @@
 
   ![image-20191108235356996](https://github.com/Yujaehyeong/SpringBoot-with-IntelliJ/blob/master/%EC%9D%B4%EB%AF%B8%EC%A7%80/springboot/index%ED%8E%98%EC%9D%B4%EC%A7%80%EC%83%9D%EC%84%B1.PNG)
 
-- index.html 파일의  
+- index.html 코드
 
   ```html
   <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">

@@ -33,4 +33,52 @@
 
   
 
-- 그런다음  `src/main/resources/template`  하위에 `index`라는 디렉토리를 하나 더 만들 것이다.
+- 그런 다음  `src/main/resources/template`  하위에 `index`라는 디렉토리를 하나 더 만들고 `index.html` 파일을 추가한다.
+
+  ![image-20191108235356996]()
+  
+
+- index.html 파일 추가 후,
+  이전에 만들어 두었던 com/example/practice/controller/TestController.java 컨트롤러를 아래처럼 수정.
+
+  - `아래처럼 코드 수정 시, import가 자동으로 되기 때문에 그 부분은 생략함. ` 
+
+  ```java
+  // 코드중략
+  
+  // AS-IS
+  @RestController
+  @RequestMapping("/test")
+  public class TestController {
+  
+      @RequestMapping("/test") // localhostL8088/test/test로 접근
+      public String getRequest(){
+          return "Hello SpringBoot!!";
+      }
+  }
+  
+  //////////////////////////////////////////////////////////////////////////////////////
+  //////////////////////////////////////////////////////////////////////////////////////
+  
+  // 코드중략
+  
+  // TO-BE
+  @Controller // Controller 어노테이션으로 수정 - 서버에서 페이지로 응답하기 위해설정
+  @RequestMapping("/test")
+  public class TestController {
+  
+      @RequestMapping("/test") // localhostL8088/test/test로 접근
+      public String getRequest(Model model){ // Model 객체 파라미터 추가
+          // Model 객체에 데이터 저장 - key:"greeting" | value:"Hello, world!" 
+          model.addAttribute("greeting", "Hello, world!"); 
+          return "/index/index"; // index.html 파일 경로매핑
+      }
+  }
+  ```
+
+
+
+
+- 코드 수정이 완료되었다면 이전처럼 브라우저에서 `localhost:8088/test/test`로 접근한다.
+
+  ![image-20191109002212580](타임리프 기본화면구성)

@@ -2,7 +2,7 @@
 
 
 
-### 1. 기본페이지 생성 
+### 1. 타임리프 라이브러리 추가
 
 - 게시판구현을 할 때 **Thymeleaf** 템플릿 엔진을 사용할것이다. (아래내용 참고)
 
@@ -31,9 +31,16 @@
   // 코드중략
   ```
 
-  
 
-- 그런 다음  `src/main/resources/template`  하위에 `index`라는 디렉토리를 하나 더 만들고 `index.html` 파일을 추가한다.
+
+
+------
+
+
+
+## 2. html 페이지 구성
+
+-  `src/main/resources/template`  하위에 `index`라는 디렉토리를 하나 더 만들고 `index.html` 파일을 추가한다.
 
   ![image-20191108235356996](https://github.com/Yujaehyeong/SpringBoot-with-IntelliJ/blob/master/%EC%9D%B4%EB%AF%B8%EC%A7%80/springboot/index%ED%8E%98%EC%9D%B4%EC%A7%80%EC%83%9D%EC%84%B1.PNG)
 
@@ -57,7 +64,14 @@
   </html>
   ```
 
-  
+
+
+
+------
+
+
+
+## 3. 컨트롤러 재구성
 
 - `index.html` 파일 추가 후,
   이전에 만들어 두었던 `com/example/practice/controller/TestController.java` 컨트롤러를 아래처럼 수정.
@@ -98,6 +112,12 @@
   ```
 
 
+
+------
+
+
+
+## 4. 페이지 확인
 
 
 - 코드 수정이 완료되었다면 이전처럼 브라우저에서 `localhost:8088/test/test`로 접근한다.

@@ -1,4 +1,4 @@
-# SpringBoot 게시판 구현(DB 연결없음)
+# SpringBoot 게시판 구현1(DB 연결없음)
 
 
 
@@ -118,4 +118,6 @@
 - 코드 수정이 완료되었다면 이전처럼 브라우저에서 `localhost:8088/test/test`로 접근한다.
 
   ![image-20191109002212580](https://github.com/Yujaehyeong/SpringBoot-with-IntelliJ/blob/master/%EC%9D%B4%EB%AF%B8%EC%A7%80/springboot/%ED%83%80%EC%9E%84%EB%A6%AC%ED%94%84%20%EA%B8%B0%EB%B3%B8%ED%99%94%EB%A9%B4%EA%B5%AC%EC%84%B1.PNG)
+
+
 

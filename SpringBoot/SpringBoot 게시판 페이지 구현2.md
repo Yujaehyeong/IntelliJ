@@ -111,7 +111,7 @@
 ```java
 // 코드중략
 
-	@RequestMapping("/board")
+    @RequestMapping("/board")
     public String getBoardList(){
         return "views/board/board"; // board.html 파일 경로매핑
     }

@@ -89,6 +89,6 @@ public class TestController {
 
 
 
-## 다음순서: SpringBoot 게시판 구현(DB 연결없음)
+## 다음순서: SpringBoot 게시판 구현1(DB 연결없음)
 
 > https://github.com/Yujaehyeong/SpringBoot-with-IntelliJ/blob/master/SpringBoot/SpringBoot%20%EA%B2%8C%EC%8B%9C%ED%8C%90%20%ED%8E%98%EC%9D%B4%EC%A7%80%20%EA%B5%AC%ED%98%84.md#springboot-%EA%B2%8C%EC%8B%9C%ED%8C%90-%EA%B5%AC%ED%98%84db-%EC%97%B0%EA%B2%B0%EC%97%86%EC%9D%8C

@@ -158,6 +158,7 @@
   
   // TO-BE
   server.port = 8088
+  
   # static file path settings
   spring.mvc.static-path-pattern=/static/**
   ```

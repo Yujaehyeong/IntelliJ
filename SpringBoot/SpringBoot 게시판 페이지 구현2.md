@@ -151,7 +151,7 @@
 
 - 해당 css 경로를 매핑해주기위해 application.properties 파일을 아래와 같이 수정한다.
 
-  ```java
+  ```properties
   // AS-IS
   server.port = 8088
   
@@ -175,8 +175,6 @@
 
 
 
-
-------
 
 
 

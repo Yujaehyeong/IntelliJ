@@ -7,7 +7,7 @@
 - 게시판은 일단 가지고 있던 html 파일과 css 파일로 작업을 할 것이다. 
   경로는 아래와 같이 만들고, 여기서 주시해야할 파일은 `resources/static/css/board.css` 파일과 `resources/templates/views/board/board.html`파일이다.
 
-  ![image-20191111232058121](C:\Users\갓맹주니행님\AppData\Roaming\Typora\typora-user-images\image-20191111232058121.png)
+  ![image-20191111232058121](https://github.com/Yujaehyeong/SpringBoot-with-IntelliJ/blob/master/%EC%9D%B4%EB%AF%B8%EC%A7%80/springboot/%EA%B2%8C%EC%8B%9C%ED%8C%90%ED%8E%98%EC%9D%B4%EC%A7%80%EA%B2%BD%EB%A1%9C.PNG)
 
 
 
@@ -130,7 +130,7 @@
 - 컨트롤러에 매핑해둔 url인 ` http://localhost:8088/test/board `로 접근하여 해당페이지를 확인한다.
   
 
-  ![image-20191111233219141](C:\Users\갓맹주니행님\AppData\Roaming\Typora\typora-user-images\image-20191111233219141.png)
+  ![image-20191111233219141](https://github.com/Yujaehyeong/SpringBoot-with-IntelliJ/blob/master/%EC%9D%B4%EB%AF%B8%EC%A7%80/springboot/%EA%B2%8C%EC%8B%9C%ED%8C%90%ED%8E%98%EC%9D%B4%EC%A7%80%EC%A0%91%EA%B7%BC.PNG)
 
 
 
@@ -167,7 +167,7 @@
   * 적용안되면 프로젝트 재시작 후 다시확인
     
 
-  ![image-20191111234646434](C:\Users\갓맹주니행님\AppData\Roaming\Typora\typora-user-images\image-20191111234646434.png)
+  ![image-20191111234646434](https://github.com/Yujaehyeong/SpringBoot-with-IntelliJ/blob/master/%EC%9D%B4%EB%AF%B8%EC%A7%80/springboot/css%EA%B2%BD%EB%A1%9C%EC%84%A4%EC%A0%95%ED%9B%84%ED%8E%98%EC%9D%B4%EC%A7%80.PNG)
 
 ------
 

@@ -2,129 +2,183 @@
 
 
 
-### 1. 타임리프 라이브러리 추가
+## 1. 게시판 페이지 경로 설정
 
-- 게시판구현을 할 때 **Thymeleaf** 템플릿 엔진을 사용할것이다. (아래내용 참고)
+- 게시판은 일단 가지고 있던 html 파일과 css 파일로 작업을 할 것이다. 
+  경로는 아래와 같이 만들고, 여기서 주시해야할 파일은 `resources/static/css/board.css` 파일과 `resources/templates/views/board/board.html`파일이다.
 
-  > https://github.com/ihoneymon/spring-boot-orm-learn/blob/master/THYMELEAF_TEMPLATE_ENGINE.md#thymeleaf-%EC%9D%B4%EC%95%BC%EA%B8%B0
+  ![image-20191111232058121](C:\Users\갓맹주니행님\AppData\Roaming\Typora\typora-user-images\image-20191111232058121.png)
 
 
 
-- 이제 바로 적용하도록 해보자.  아래 링크에 정리가 잘되어있어서 그대로 따라하면 된다.
+- css파일 및 html 파일이 따로 없으면 아래의 html 코드만 사용하도록한다.
+  `resources/templates/views/board/board.html`
   
-> https://github.com/ihoneymon/spring-boot-orm-learn/blob/master/THYMELEAF_TEMPLATE_ENGINE.md#%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8%EC%97%90-thymeleaf-%EC%A0%81%EC%9A%A9
-
-- 설명된 것과 같이 `build.gradle` 파일에 해당 문구를 추가하겠다.
-
-  ```java
-  // 코드중략
-  dependencies {
-      // 기존에 있던 문구들
-      implementation 'org.springframework.boot:spring-boot-starter-web'
-      testImplementation 'org.springframework.boot:spring-boot-starter-test'
-      // 아래 문구를 추가    
-      compile "org.springframework.boot:spring-boot-starter-thymeleaf"
-  }
-  // 코드중략
-  ```
-
-
-
-------
-
-
-
-## 2. html 페이지 구성
-
--  `src/main/resources/template`  하위에 `index`라는 디렉토리를 하나 더 만들고 `index.html` 파일을 추가한다.
-
-  ![image-20191108235356996](https://github.com/Yujaehyeong/SpringBoot-with-IntelliJ/blob/master/%EC%9D%B4%EB%AF%B8%EC%A7%80/springboot/index%ED%8E%98%EC%9D%B4%EC%A7%80%EC%83%9D%EC%84%B1.PNG)
-
-- index.html 코드
-
   ```html
-  <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-  <html xmlns:th="http://www.w3.org/1999/xhtml">
+  <!DOCTYPE html>
+  <html>
   <head>
-      <meta charset="UTF-8"/>
-      <title>Index: ORM learning programming</title>
+      <title>mysite</title>
+      <meta http-equiv="content-type" content="text/html; charset=utf-8">
+      <link href="/static/css/board.css" rel="stylesheet" type="text/css">
   </head>
   <body>
-  <h1>Made by honeymon</h1>
-  <div>
-      <div>Very simple!</div>
-      <!-- SpEl: Spring Expression Language 사용 -->
-      <div th:text="${greeting}">Greeting</div>
+  <div id="container">
+      <div id="header">
+          <h1>MySite</h1>
+          <ul>
+              <li><a href="#">로그인</a><li>
+              <li><a href="#">회원가입</a>	<li>
+              <li><a href="#">회원정보수정</a><li>
+              <li><a href="#">로그아웃</a><li>
+              <li>jh님 안녕하세요 ^^;</li>
+          </ul>
+      </div>
+      <div id="content">
+          <div id="board">
+              <form id="search_form" action="#" method="get">
+                  <input type="text" id="keyword" name="keyword" value="검색어를 입력해주세요.">
+                  <input type="hidden" id="showBoardNum" name="showBoardNum" value="${showBoardNum}">
+                  <input type="submit" value="찾기">
+              </form>
+              <table class="tbl-ex">
+                  <tr>
+                      <th>번호</th>
+                      <th>제목</th>
+                      <th>글쓴이</th>
+                      <th>조회수</th>
+                      <th>작성일</th>
+                      <th>&nbsp;</th>
+                  </tr>
+  
+                      <tr>
+                          <td>1</td>
+                          <td style="text-align:left; padding-left: 20px">
+                              <a href="#">안녕하세요~</a>
+                          </td>
+                          <td>이효리</td>
+                          <td>13</td>
+                          <td>2019-11-11</td>
+                          <td><a href="#" class="del">삭제</a></td>
+                      </tr>
+  
+              </table>
+  
+              <!-- pager 추가 -->
+              <div class="pager">
+                  <ul>
+                          <li><a href="#">◀</a></li>
+                                  <li class="selected">
+                                      <a href="#">1</a>
+                                  </li>
+                                  <li>
+                                      <a href="#">2</a>
+                                  </li>
+                          <li><a href="#">▶</a></li>
+                  </ul>
+              </div>
+  
+              <div class="bottom">
+                  <a href="#" id="new-book">글쓰기</a>
+              </div>
+          </div>
+      </div>
+      <div id="navigation">
+          <ul>
+              <li><a href="#">jh</a></li>
+              <li><a href="#">방명록</a></li>
+              <li><a href="#">게시판</a></li>
+          </ul>
+      </div>
+      <div id="footer">
+          <p>(c)opyright 2015, 2016, 2017, 2018</p>
+      </div>
   </div>
   </body>
   </html>
   ```
 
+------
+
+
+
+## 2. 컨트롤러 경로 매핑
+
+
+
+- 이전에 만들었던 `com/example/practice/controller/TestController.java` 에 아래의 코드를 추가한다.
+
+```java
+// 코드중략
+
+	@RequestMapping("/board")
+    public String getBoardList(){
+        return "views/board/board"; // board.html 파일 경로매핑
+    }
+```
+
 
 
 ------
 
 
 
-## 3. 컨트롤러 재구성
+## 3. 페이지 확인 및 css 경로설정
 
-- `index.html` 파일 추가 후,
-  이전에 만들어 두었던 `com/example/practice/controller/TestController.java` 컨트롤러를 아래처럼 수정.
 
-  - `아래처럼 코드 수정 시, import가 자동으로 되기 때문에 그 부분은 생략함. ` 
 
-  ```java
-  // 코드중략
+- 컨트롤러에 매핑해둔 url인 ` http://localhost:8088/test/board `로 접근하여 해당페이지를 확인한다.
   
-  // AS-IS
-  @RestController
-  @RequestMapping("/test")
-  public class TestController {
-  
-      @RequestMapping("/test") // localhostL8088/test/test로 접근
-      public String getRequest(){
-          return "Hello SpringBoot!!";
-      }
-  }
-  
-  //////////////////////////////////////////////////////////////////////////////////////
-  //////////////////////////////////////////////////////////////////////////////////////
-  
-  // 코드중략
-  
-  // TO-BE
-  @Controller // Controller 어노테이션으로 수정
-  @RequestMapping("/test")
-  public class TestController {
-  
-      @RequestMapping("/test") // localhostL8088/test/test로 접근
-      public String getRequest(Model model){ // Model 객체 파라미터 추가
-          // Model 객체에 데이터 저장 - key:"greeting" | value:"Hello, world!" 
-          model.addAttribute("greeting", "Hello, world!"); 
-          return "index/index"; // index.html 파일 경로매핑
-      }
-  }
+
+  ![image-20191111233219141](C:\Users\갓맹주니행님\AppData\Roaming\Typora\typora-user-images\image-20191111233219141.png)
+
+
+
+- 위의 페이지를 보면 현재 css가 적용되지 않았기때문에 css 적용하기 위해서는 경로 매핑을 해줘야한다. 
+  - 일반적인 Spring 에서는 `.xml`파일에서 리소스의 경로를 입력해줘야 했지만, spring boot에서는 
+    `build.gradle` 파일에  `implementation 'org.springframework.boot:spring-boot-starter-web'` 문구를 추가하여 얻은 라이브러리가 해당 작업들을 미리 해준다. 
+  - js, css, img 등과 같은 정적 파일들은 `resources/static` 폴더 하위에 두는게 기본이다. 그래서 맨위 이미지를 확인해보면 게시판을 꾸며줄 css 경로가 `resources/static/css/board.css`로 되어있다.
+
+
+
+- 위의 html 코드 5번째 줄을 보면, 아래와 같이
+
+  ```html
+  <link href="/static/css/board.css" rel="stylesheet" type="text/css">
   ```
 
+  css 파일 경로가 `/static/css/board.css`로 되어있다. 그런데도 css가 적용안된 페이지가 나타난다.
+
+- 해당 css 경로를 매핑해주기위해 application.properties 파일을 아래와 같이 수정한다.
+
+  ```java
+  // AS-IS
+  server.port = 8088
+  
+  
+  // TO-BE
+  server.port = 8088
+  # static file path settings
+  spring.mvc.static-path-pattern=/static/**
+  ```
+
+  그런 후 다시 페이지를 확인해보면, 아래와같이 css가 적용된 페이지를 확인할 수 있다.
+
+  * 적용안되면 프로젝트 재시작 후 다시확인
+    
+
+  ![image-20191111234646434](C:\Users\갓맹주니행님\AppData\Roaming\Typora\typora-user-images\image-20191111234646434.png)
+
+------
+
+
+
 
 
 ------
 
 
 
-## 4. 페이지 확인
 
-
-- 코드 수정이 완료되었다면 이전처럼 브라우저에서 `localhost:8088/test/test`로 접근한다.
-
-  ![image-20191109002212580](https://github.com/Yujaehyeong/SpringBoot-with-IntelliJ/blob/master/%EC%9D%B4%EB%AF%B8%EC%A7%80/springboot/%ED%83%80%EC%9E%84%EB%A6%AC%ED%94%84%20%EA%B8%B0%EB%B3%B8%ED%99%94%EB%A9%B4%EA%B5%AC%EC%84%B1.PNG)
-
-
-
-------
-
-
-
-
-## SpringBoot 게시판 구현1(DB 연결없음)
+## SpringBoot 게시판 구현3(DB 연결없음)
 
